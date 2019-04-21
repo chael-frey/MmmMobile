@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./less/moneyctrl.css">
+
+</head>
+<body>
+    <header id="header">
+        <a href="index.html">&lt;</a>
+        <p>省钱控-最新优惠</p>
+        <div class="appdown">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    
+    <!-- 滚动区域 -->
+    <main class="mui-scroll-wrapper all">
+        <div class="mui-scroll">
+            <!-- 主体内容区 -->
+            <main id="main">
+                <div class="box">
+                    <ul>
+                       
+                    </ul>
+                </div>
+                <div id="pageBox">
+                        <button id='previous'>上一页</button>
+                        <div class="select">
+                                <span>1/11</span>
+                            <div class="optionBox mui-scroll-wrapper">
+                                    <div class="mui-scroll">
+                                        <div class="option" data-value="1">1/11</div>
+                                
+                                    </div>
+                            </div>
+                        </div>
+                        <button id='next'>下一页</button>
+                </div>
+            </main>
+            <!-- 底部 -->
+            <footer id="footer">
+                <div class="foot-top">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="javascript:void(0)" id="btn-top"><img src="./images/top.png" alt=""> 返回顶部</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-cont">
+                    <p>
+                        <a href="#">手机APP下载</a>
+                        慢慢买手机版 -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+<script type="text/html" id="moneyctrlTpl">
+    <div class="box">
+            <ul>
+                {{each result value index}}
+                <li>
+                    <a href="save-sale.html?productid={{value.productId}}">
+                        <div class="left">
+                                {{@value.productImgSm}}
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <p class="title">
+                                        {{value.productName}}
+                                </p>
+                                <p class="price">
+                                    {{value.productPinkage}}
+                                </p>
+                            </div>
+                            <div class="bottom">
+                                    <span>{{value.productFrom}} | <span>{{value.productTime}}</span></span>
+                                    <span>{{value.productComCount}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div id="pageBox">
+                <button id='previous'>上一页</button>
+                <div class="select">
+                        <span>{{pageid+1}}/{{arr.length}}</span>
+                    <div class="optionBox mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                {{each arr value index}}
+                                <div class="option {{index==1?'active':''}}" data-value="{{value}}">{{value+1}}/{{arr.length}}</div>
+                                {{/each}}
+                            </div>
+                    </div>
+                </div>
+                <button id='next'>下一页</button>
+        </div>
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/fx.js"></script>
+<script src="./lib/zepto/fx_methods.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/moneyctrl.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

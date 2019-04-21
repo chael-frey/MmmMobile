@@ -1,0 +1,98 @@
+@import "base.less";
+#filtrate{
+    background: linear-gradient(to bottom, #fff, #ddd);
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 -1px 3px #ddd;
+	width: 100%;
+    background-color: #fff;
+    .flex-center();
+    padding: 0 15px;
+    justify-content: space-between;
+    font-size: 14px;
+    a{
+        color: #000;
+    }
+    p{
+        margin: 0;
+        
+    }
+    >a{
+        display: block;
+        height: 30px;
+        padding: 0 10px;
+        line-height: 30px;
+        background: linear-gradient(to top, #fff, #ddd);
+        box-shadow: 0px 0px 1px #AAAAAA, 0px 1px 1px #AAAAAA;
+        border-radius: 5px;
+    }
+}
+#productBox{
+    margin-bottom: 10px;
+    .mui-table-view{
+        .mui-table-view-cell{
+            a{  
+                margin: 0;
+                padding: 0;
+                display: block;
+                .mui-row{
+                    .mui-col-xs-4{
+                        img{
+                            width: 100px;
+                            
+                        }
+                    }
+                    .mui-col-xs-8{
+                        height: 100px;
+                        .flex-center();
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .top{
+                            .tit{
+                                font-size: 14px;
+                                line-height: 18px;
+                                color: #000;
+                                white-space:normal;
+                                word-wrap: break-word;
+                            }
+                            .price{
+                                margin-top: 12px;
+                                .flex-center();
+                                justify-content: space-between;
+                                font-size: 20px;
+                                line-height: 20px;
+                                font-weight:700;
+                                font-family: simsun;
+                                color: #ea3900;
+                                img{
+                                    width: 18px;
+                                    height: 18px;
+                                    float: right;
+                                }
+                            }
+                        }
+                        .bottom{
+                            width: 100%;
+                            p{
+                                text-align: right;
+                                width: 100%;
+                                span{
+                                    margin: 0 3px;
+                                }
+                            }
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: #a1a1a1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mui-scroll-wrapper .mui-scroll #footer{
+    margin-top: 10px;
+}
+#pageBox .select .optionBox{
+    top :-59px;
+}

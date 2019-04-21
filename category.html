@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./less/category.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <section id="form-search">
+        <form class="search" action="">
+            <input type="search" class="searchBar" placeholder="请输入你想比价的商品">
+            <input type="button" class="btn-search" value="搜索">
+        </form>
+    </section>
+    <!-- 滚动区域 -->
+    <main class="mui-scroll-wrapper all">
+        <div class="mui-scroll">
+            <!-- 主体内容区 -->
+            <mian id="main">
+                <section id="categoryBox">
+                    <ul class="mui-table-view"> 
+                        <li class="mui-table-view-cell mui-collapse">
+                            <a class="mui-navigate-right" href="#">大家电</a>
+                            <div class="mui-collapse-content">
+                                <div class="mui-row">
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                        <a href="#">
+                                            电视
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </section>
+                <div class="recommen">
+                    <div class="list-title">
+                        <span>品牌排行</span>
+                        <img src="./images/more.png" alt="">
+                    </div>
+                </div>
+            </mian>
+            <!-- 底部 -->
+            <footer id="footer">
+                <div class="foot-top">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="javascript:void(0)" id="btn-top"><img src="./images/top.png" alt=""> 返回顶部</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-cont">
+                    <p>
+                        <a href="#">手机APP下载</a>
+                        慢慢买手机版 -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+<script type="text/html" id="categoryTpl">
+    {{each result value index}}
+        <div class="mui-col-xs-4">
+            <a href="productList.html?categoryid={{value.categoryId}}" data-id="{{value.categoryId}}">
+                {{value.category}}
+            </a>
+        </div>
+    {{/each}}
+</script>
+<script type="text/html" id="categoryTitTpl">
+    {{each result value index}}
+        <li class="mui-table-view-cell mui-collapse">
+            <a class="mui-navigate-right" data-id="{{value.titleId}}" href="#">{{value.title}}</a>
+            <div class="mui-collapse-content">
+                <div class="mui-row">
+                    
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/fx.js"></script>
+<script src="./lib/zepto/fx_methods.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/category.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

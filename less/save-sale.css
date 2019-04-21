@@ -1,0 +1,347 @@
+.mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: .14px;
+  line-height: 100%;
+  -webkit-tap-highlight-color: #fff;
+}
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #ff4e49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header a {
+  display: block;
+}
+#header .logo {
+  padding-left: 5px;
+  flex: 1;
+}
+#header .logo img {
+  height: 25px;
+}
+#header .appdown {
+  padding-right: 5px;
+  display: block;
+}
+#header .appdown img {
+  width: 34px;
+}
+#form-search {
+  width: 100%;
+  background-color: #fff;
+}
+#form-search .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#form-search .search > input {
+  height: 30px;
+}
+#form-search .search .searchBar {
+  flex: 1;
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+#form-search .search .btn-search {
+  width: 63px;
+  margin-left: 10px;
+  border-radius: 15px;
+  background-color: #565656;
+  color: #fff;
+  line-height: 100%;
+}
+.mui-scroll-wrapper .mui-scroll #main .list-title {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  background-color: #ff4e49;
+}
+.mui-scroll-wrapper .mui-scroll #main .list-title span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.mui-scroll-wrapper .mui-scroll #main .list-title img {
+  width: 20px;
+  height: 20px;
+}
+.mui-scroll-wrapper .mui-scroll #footer {
+  background-color: #232a34;
+  margin-top: 25px;
+  text-align: center;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-top .mui-row > div a {
+  display: block;
+  font-size: 12px;
+  line-height: 33px;
+  color: #fff;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-top .mui-row > div a img {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-top .mui-row > div:nth-child(2) a {
+  border-left: 1px solid #727272;
+  border-right: 1px solid #727272;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-cont {
+  border-top: 1px solid #727272;
+  padding: 15px 0;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-cont p {
+  font-size: 10px;
+}
+.mui-scroll-wrapper .mui-scroll #footer .foot-cont p a {
+  color: #ff4e49;
+}
+#pageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pageBox .select {
+  position: relative;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  padding: 0;
+}
+#pageBox .select .optionBox {
+  display: none;
+  width: 80px;
+  position: absolute;
+  top: -115px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  height: 144px;
+}
+#pageBox .select .optionBox .mui-scroll {
+  border-top: 1px solid #ccc;
+}
+#pageBox .select .optionBox .mui-scroll .option {
+  height: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: -1px;
+}
+#pageBox .select .optionBox .mui-scroll .option.active {
+  background-color: skyblue;
+}
+#header p {
+  flex: 1;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+#header a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  width: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'SimSun';
+}
+#header .appdown {
+  width: 40px;
+}
+.mui-scroll {
+  background-color: #fff;
+}
+.mui-scroll #main .product .title {
+  padding: 0 20px;
+  margin: 15px 0 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+}
+.mui-scroll #main .product .name-id {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+.mui-scroll #main .product .main-center {
+  color: #606060;
+}
+.mui-scroll #main .product .main-center .right-tu {
+  width: 120px;
+  height: 120px;
+  float: right;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+.mui-scroll #main .product .main-center .right-tu img {
+  width: 120px;
+  height: 120px;
+}
+.mui-scroll #main .product .main-center .left-content p {
+  width: 100%;
+  color: #333;
+  text-indent: 2em;
+  font-size: 14px;
+  line-height: 24px;
+  word-break: break-all;
+  padding-left: 20px;
+  margin-bottom: 0 ;
+}
+.mui-scroll #main .product .main-center .big-img {
+  margin-top: 15px;
+  text-align: center;
+}
+.mui-scroll #main .product .main-center .big-img img {
+  width: 350px;
+  height: 350px;
+}
+.mui-scroll #main .product .city-trade {
+  margin: 20px 0;
+}
+.mui-scroll #main .product .city-trade .drop {
+  padding: 0 0 10px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  border-color: #f1f1f1 #f1f1f1 #dbdbdb;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  width: 200px;
+  margin: 0 auto;
+}
+.mui-scroll #main .product .city-trade .drop #disstorck {
+  width: 200px;
+  margin: 0 auto;
+}
+.mui-scroll #main .product .city-trade .drop #disstorck > li {
+  font-size: 12px;
+  font-family: Microsoft Yahei;
+  line-height: 20px;
+}
+.mui-scroll #main .product .city-trade .drop #disstorck > li > a {
+  display: block;
+  padding: 0 10px;
+}
+.mui-scroll #main .product .city-trade .drop #disstorck > li > a > span {
+  border-bottom: 1px dotted silver;
+  display: block;
+  text-align: left;
+}
+.mui-scroll #main .product .city-trade .drop #disstorck > li > a > span strong {
+  color: #f27b04;
+  float: right;
+  font-weight: 400;
+}
+.mui-scroll #main .product .go-buy {
+  display: block;
+  background: #ff9000;
+  color: white;
+  margin: 0 10px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+.mui-scroll #main .bigTu {
+  padding: 20px 10px;
+}
+.mui-scroll #main .bigTu img {
+  width: 100%;
+}
+.mui-scroll #main .talks {
+  padding: 5px;
+}
+.mui-scroll #main .talks .tit {
+  font-size: 14px;
+  line-height: 34px;
+}
+.mui-scroll #main .talks .reply .form {
+  border: 1px solid #ccc;
+}
+.mui-scroll #main .talks .reply .form textarea {
+  border: none;
+  margin: 0;
+}
+.mui-scroll #main .talks .reply .form .ctrl {
+  text-align: right;
+  background-color: #fbfbfb;
+}
+.mui-scroll #main .talks .list ul {
+  margin: 0;
+}
+.mui-scroll #main .talks .list ul li {
+  margin: 10px 0;
+}
+.mui-scroll #main .talks .list ul .userimg {
+  width: 40px;
+  height: 40px;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mui-scroll #main .talks .list ul .userimg img {
+  width: 100%;
+  height: 100%;
+}
+.mui-scroll #main .talks .list ul .con {
+  overflow: hidden;
+  padding-left: 10px;
+}
+.mui-scroll #main .talks .list ul .con .name {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.mui-scroll #main .talks .list ul .con .username {
+  color: #5997c0;
+  font-size: 13px !important;
+  line-height: 13px;
+  float: left;
+}
+.mui-scroll #main .talks .list ul .con .time {
+  color: #999;
+  font-size: 13px !important;
+  float: right;
+  line-height: 13px;
+}
+.mui-scroll #main .talks .list ul .con .content {
+  word-break: break-all;
+  font-size: 15px!important;
+  color: #606060;
+  line-height: 20px;
+  line-height: 26px;
+}

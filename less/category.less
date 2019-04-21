@@ -1,0 +1,36 @@
+@import "./base.less";
+#categoryBox{
+    ul{
+        background-color: rgb(239, 239, 244);
+        .mui-table-view-cell{
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            .mui-navigate-right{
+                line-height: 40px;
+                margin: 0;
+                padding:0 10px;
+                &::after{
+                    font-size: 16px;
+                }
+            }
+            .mui-collapse-content{
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                .mui-row{
+                    background-color: #F9F9F9;
+                    >div{
+                        a{  
+                            color: #000;
+                            border: 1px solid #ccc;
+                            display: block;
+                            .flex-center();
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

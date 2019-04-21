@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./less/index.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <section id="form-search">
+        <form class="search" action="">
+            <input type="search" class="searchBar" placeholder="请输入你想比价的商品">
+            <input type="button" class="btn-search" value="搜索">
+        </form>
+    </section>
+    <!-- 滚动区域 -->
+    <main class="mui-scroll-wrapper all">
+        <div class="mui-scroll">
+            <div id="slider" class="mui-slider" >
+                <div class="mui-slider-group mui-slider-loop">
+                        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="./images/banner05.jpg">
+                            </a>
+                        </div>
+                        <!-- 第一张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/banner01.jpg">
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/banner02.jpg">
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/banner03.jpg">
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/banner04.jpg">
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/banner05.jpg">
+                            </a>
+                        </div>
+                        
+                        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="./images/banner01.jpg">
+                            </a>
+                        </div>
+                </div>
+                <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                </div>
+            </div>
+            <!-- 导航区 -->
+            <section id="menu">
+                <div class="mui-row">
+                    
+                </div>
+            </section>
+            <!-- 主体内容区 -->
+            <mian id="main">
+                <div class="product-list">
+                    <div class="list-title">
+                        <span>超值折扣推荐</span>
+                        <img src="./images/more.png" alt="">
+                    </div>
+                    <div class="product">
+                        <ul class="mui-table-view">
+                           <li class="mui-table-view-cell mui-media">
+                               <a href="javascript:;">
+                                   <img class="mui-media-object mui-pull-left" src="./images/1.png">
+                                   <div class="mui-media-body">
+                                       <div class="top">
+                                            <p class="title"> 双11预售：日本进口尤妮佳/Moony婴儿纸尿裤M64*3包 </p>
+                                            <p class="price">25元定金+185元尾款</p>
+                                       </div>
+                                       <div class="bottom">
+                                           <p><span class="date">天猫商城 | 10-25 13:57</span><span class="num">1</span></p>
+                                       </div>
+                                   </div>
+                               </a>
+                           </li>
+                        </ul>
+                        <div class="more-bar">
+                            <a href="#">更多优惠信息</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommen">
+                    <div class="list-title">
+                        <span>品牌排行</span>
+                        <img src="./images/more.png" alt="">
+                    </div>
+                </div>
+            </mian>
+            <!-- 底部 -->
+            <footer id="footer">
+                <div class="foot-top">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="javascript:void(0)" id="btn-top"><img src="./images/top.png" alt=""> 返回顶部</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-cont">
+                    <p>
+                        <a href="#">手机APP下载</a>
+                        慢慢买手机版 -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+<script type="text/html" id="productTpl">
+    {{each result value index}}
+         <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="mui-pull-left">
+                        {{@value.productImgSm}}
+                </div>
+                <div class="mui-media-body">
+                    <div class="top">
+                         <p class="title"> {{value.productName}} </p>
+                         <p class="price">{{value.productPinkage}}</p>
+                    </div>
+                    <div class="bottom">
+                        <p><span class="date"><span>{{value.productFrom}}</span> | {{value.productTime}}</span><span class="num">{{value.productComCount}}</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+<script type="text/html" id="menuTpl">
+    {{each result value index}}
+        <div class="mui-col-xs-3 {{index>7?'menu-hidden':''}} {{value.name=='更多'?'btn-change':''}}">
+            <a href="{{value.name=='更多'?'javascript:;':value.titlehref}}">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+    {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/fx.js"></script>
+<script src="./lib/zepto/fx_methods.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

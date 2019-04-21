@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./less/productList.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <section id="filtrate">
+        <p>
+            <a href="index.html">首页</a>
+            <span>></span>
+            <a href="category.html">全部分类</a>
+            <span>></span>
+            <a href="#">大家电</a>
+        </p>
+        <a href="#">筛选</a>
+    </section>
+    <!-- 滚动区域 -->
+    <main class="mui-scroll-wrapper all">
+        <div class="mui-scroll">
+            <!-- 主体内容区 -->
+            <mian id="main">
+                 
+            </mian>
+            <!-- 底部 -->
+            <footer id="footer">
+                <div class="foot-top">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="javascript:void(0)" id="btn-top"><img src="./images/top.png" alt=""> 返回顶部</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-cont">
+                    <p>
+                        <a href="#">手机APP下载</a>
+                        慢慢买手机版 -- 掌上比价平台
+                    </p>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+<script type="text/html" id="productTpl"> 
+    <div id="productBox">
+        <ul class="mui-table-view">
+    {{each result value index}}
+        <li class="mui-table-view-cell">
+            <a href="productDetails.html?categoryid={{categoryid}}&productId={{value.productId}}">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        {{@value.productImg}}
+                    </div>
+                    <div class="mui-col-xs-8">
+                        <div class="top">
+                            <p class="tit">{{value.productName}}</p>
+                            <p class="price">
+                                <span>
+                                    {{value.productPrice}}
+                                </span>
+                                <span>
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                </span>
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <span>{{value.productQuote}}</span>
+                                <span>{{value.productCom}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+        </ul>
+    </div>
+    <div id="pageBox">
+            <button id='previous'>上一页</button>
+            <div class="select">
+                    <span>{{pageid}}/{{arr.length}}</span>
+                <div class="optionBox mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            {{each arr value index}}
+                            <div class="option {{index==0?'active':''}}" data-value="{{value}}">{{value}}/{{arr.length}}</div>
+                            {{/each}}
+                        </div>
+                </div>
+            </div>
+            <button id='next'>下一页</button>
+    </div>
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/zepto/fx.js"></script>
+<script src="./lib/zepto/fx_methods.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productList.js"></script>
+</body>
+</html>
